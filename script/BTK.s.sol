@@ -2,9 +2,9 @@
 pragma solidity ^0.8.13;
 
 import {Script, console2} from "forge-std/Script.sol";
-import "../src/FSU.sol";
+import "../src/BTK.sol";
 
-contract FSUScript is Script {
+contract BTKScript is Script {
     /**
      * @dev Relevant source part starts here and spans across multiple lines
      */
@@ -19,7 +19,8 @@ contract FSUScript is Script {
         vm.startBroadcast(deployerPrivateKey);
 
         // Deploy
-        FSU t = new FSU();
+        // TODO: totalSupply
+        BTK t = new BTK();
 
         // Verify + End
         console2.log(t.totalSupply());

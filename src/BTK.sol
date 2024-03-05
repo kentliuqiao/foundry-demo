@@ -580,7 +580,7 @@ abstract contract Ownable is Context {
     }
 }
 
-// File: contracts\FSU.sol
+// File: contracts\BTK.sol
 
 pragma solidity >=0.8.0 <0.9.0;
 
@@ -606,10 +606,10 @@ contract BlackList is Ownable {
     event RemovedBlackList(address indexed _user);
 }
 
-contract FSU is ERC20, BlackList {
-    uint256 private constant preMineSupply = 50000000000 * 1e18;
+contract BTK is ERC20, BlackList {
+    uint256 private constant preMineSupply = 100000000 * 1e18;
 
-    constructor() ERC20("FSU", "FSU") {
+    constructor() ERC20("BTK", "BTK") {
         _mint(msg.sender, preMineSupply);
     }
 

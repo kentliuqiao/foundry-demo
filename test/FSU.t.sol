@@ -19,14 +19,14 @@ contract FSUTest is Test {
      */
     function setUp() public {
         vm.prank(supplyOwnerAddress);
-        token = new FSU("FSU Token", "FSU", 10000);
+        token = new FSU();
     }
 
     /**
      * @dev Test initiatted token name
      */
     function test_name() public {
-        assertEq(token.name(), "FSU Token");
+        assertEq(token.name(), "FSU");
     }
 
     /**
